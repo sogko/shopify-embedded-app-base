@@ -13,7 +13,7 @@ var express = require('express'),
 
 //load settings from environment config
 nconf.argv().env().file({
-    file: (process.env.NODE_ENV || 'dev') + '-settings.json'
+  file: './settings/ ' + (process.env.NODE_ENV || 'dev') + '.json'
 });
 exports.nconf = nconf;
 
