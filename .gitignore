@@ -26,3 +26,8 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# Ignore all settings files except dev.json
+settings/*
+!settings/dev.json
+certs
