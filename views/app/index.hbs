@@ -1,0 +1,55 @@
+<script>
+  ShopifyApp.ready(function () {
+    ShopifyApp.Bar.loadingOff();
+    ShopifyApp.Bar.initialize({
+      title: {
+        label: '{{ title }}',
+        href: '/app'
+      },
+      buttons: {
+        primary: {
+          label: 'Refresh Manager Data',
+          message: 'refresh_manager_data',
+          callback: function () {
+            ShopifyApp.Bar.loadingOn();
+            console.log('Downloading data...');
+            ShopifyApp.Modal.open({
+              src: 'https://google.com',
+              title: 'A new modal',
+              width: 'small',
+              height: 300,
+              buttons: {
+                primary: {label: "OK"},
+                secondary: [
+                  {
+                    label: "Cancel", callback: function (label) {
+                    ShopifyApp.Modal.close();
+                  }
+                  }
+                ]
+              }
+            }, function (result, data) {
+              alert("result: " + result + "   data: " + data);
+            });
+            ShopifyApp.Bar.loadingOff();
+          }
+        }
+      },
+      pagination: {
+        next: {
+          href: "/app?page=2"
+        }
+      },
+      breadcrumb: {
+        label: "Subsecti22on",
+        href: "/app/subsection",
+        target: 'app',
+        loading: false
+      }
+    });
+  });
+
+</script>
+
+<h1>My App View</h1>
+<p>hello world</p>
