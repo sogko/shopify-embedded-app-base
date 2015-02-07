@@ -1,8 +1,17 @@
 {
+  "app": {
+    "name": "Shopify Embedded App"
+  },
   "oauth": {
     "api_key": "<YOUR API KEY>",
     "client_secret": "<YOUR CLIENT SECRET>",
-    "redirect_url": "http://localhost:3000/auth_token",
+    "redirect_url": "http://localhost:3000/oauth/access_token",
     "scope": "read_products"
+  },
+  "server": {
+    "session_key": "<SESSION SECRET KEY>",
+    "port": 3443,
+    "ssl_key_path": "path to server key",
+    "ssl_cert_path": "path to server cert"
   }
 }
