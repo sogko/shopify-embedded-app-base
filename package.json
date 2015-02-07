@@ -6,9 +6,14 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.8",
-    "jade": "*",
-    "oauth": "~0.9.11",
-    "nconf": "~0.6.9"
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "express": "~4.2.0",
+    "express-error-handler": "^1.0.1",
+    "express-handlebars": "^1.1.0",
+    "express-session": "1.6.5",
+    "morgan": "~1.0.0",
+    "nconf": "~0.6.9",
+    "oauth": "~0.9.11"
   }
 }
